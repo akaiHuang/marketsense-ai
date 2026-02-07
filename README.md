@@ -4,13 +4,17 @@
 
 An end-to-end pipeline that goes far beyond web scraping. MarketSense AI combines automated crawling with LLM-powered analysis to transform raw web pages into structured, quality-reviewed market intelligence -- from research brief generation through actionable insights delivery.
 
+## 📋 Quick Summary
+
+> 🧠 **MarketSense AI** 是一套端到端的智慧市場情報管線，遠超傳統網頁爬蟲的範疇。🔬 核心流程由 LLM 驅動——從自動生成研究簡報、規劃目標 URL、隱匿式網頁抓取、結構化資訊萃取，到品質評分與二次優化，全程自動化。🕷️ 爬蟲層採用 Playwright 搭配反偵測外掛（stealth plugins），能處理 JavaScript 渲染、反機器人防護與動態內容。🤖 雙層 LLM 分析架構：第一層萃取痛點、情緒信號、競爭定位與可行洞察；第二層進行品質評分、噪音過濾與弱結果增強。📋 支援 Firestore 分散式任務佇列（入隊、租約、回收），以及安全探測測試預判封鎖率。⚡ Express.js API 伺服器可獨立運作，接收品牌設定即回傳結構化行銷情報。📊 輸出格式涵蓋 JSON、CSV 與互動式儀表板。🛠️ 技術棧融合 Python 管線核心、Node.js API 層與 Firebase 後端。💡 將過去研究團隊需要數天完成的市場調研，壓縮為單一指令即可執行的自動化流程。
+
 ---
 
-## Why This Exists
+## 💡 Why This Exists
 
 Market research still relies heavily on manual browsing, reading, and summarizing. MarketSense AI automates the entire intelligence pipeline: an LLM generates the research brief, a stealth crawler collects the data, another LLM pass extracts structured insights, and a quality review layer scores and filters the results. What used to take a research team days runs as a single pipeline command.
 
-## Architecture
+## 🏗️ Architecture
 
 ```
 Research Brief (Brand + Product + Objective)
@@ -71,7 +75,7 @@ POST /api/analyze
   trends, language style, marketing recommendations
 ```
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 - **Crawling**: Playwright with playwright-extra and stealth plugins
 - **LLM Integration**: MiniMax / OpenAI-compatible API (configurable)
@@ -80,7 +84,7 @@ POST /api/analyze
 - **Pipeline Core**: Python
 - **Configuration**: dotenv
 
-## Quick Start
+## 🏁 Quick Start
 
 ### Crawler API (Node.js)
 
@@ -157,7 +161,7 @@ PYTHONPATH=python python -m marketsense.main_dashboard \
   --env-file python/marketsense/.env --limit 200
 ```
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 marketsense-ai/
